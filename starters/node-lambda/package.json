@@ -1,0 +1,21 @@
+{
+  "name": "@vitest/example-test",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run"
+  },
+  "dependencies": {
+    "@types/aws-lambda": "^8.10.96",
+    "xstate": "latest"
+  },
+  "devDependencies": {
+    "@vitest/ui": "latest",
+    "vite": "^2.9.5",
+    "vitest": "latest"
+  }
+}
