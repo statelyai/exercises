@@ -96,7 +96,7 @@ interpret(machine)
       video.autoplay = true;
     } else {
       app.innerHTML = `
-        <code>${state.value}</code>
+        <pre>${JSON.stringify(state.value)}</pre>
         <pre>${JSON.stringify(state.context, null, 2)}</pre>
       `;
     }
