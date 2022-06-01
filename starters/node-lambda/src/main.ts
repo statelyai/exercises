@@ -14,11 +14,7 @@ const handlerMachine = createMachine({
 export const lambdaHandler = async (
   event: APIGatewayProxyEvent
 ): Promise<APIGatewayProxyResult> => {
-  const actor = interpret(
-    handlerMachine.withContext({
-      name: event.queryStringParameters.name,
-    })
-  ).start();
+  const actor = interpret(handlerMachine).start();
 
   const finalState = await waitFor(actor, (state) => state.done);
 

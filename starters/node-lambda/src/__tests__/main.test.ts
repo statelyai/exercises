@@ -3,11 +3,7 @@ import { lambdaHandler } from "../main";
 
 describe("lambdaHandler", () => {
   it("Should return 500", async () => {
-    const result = await lambdaHandler({
-      queryStringParameters: {
-        name: "name",
-      },
-    } as any);
+    const result = await lambdaHandler({} as any);
 
     expect(result.statusCode).toBe(500);
   });
