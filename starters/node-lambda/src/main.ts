@@ -2,7 +2,14 @@ import { createMachine, interpret } from "xstate";
 import { waitFor } from "xstate/lib/waitFor";
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from "aws-lambda";
 
-const handlerMachine = createMachine({});
+const handlerMachine = createMachine({
+  initial: "doneState",
+  states: {
+    doneState: {
+      type: "final",
+    },
+  },
+});
 
 export const lambdaHandler = async (
   event: APIGatewayProxyEvent
